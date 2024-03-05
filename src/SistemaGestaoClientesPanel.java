@@ -1,9 +1,7 @@
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -107,5 +105,9 @@ public class SistemaGestaoClientesPanel extends JPanel {
 
     public void setListaContatosCallback(Consumer<List<Cliente>> callback) {
         this.listaContatosCallback = callback;
+    }
+
+    public List<Cliente> obterTodosContatos() {
+        return new ArrayList<>(mapaClientes.values());
     }
 }
